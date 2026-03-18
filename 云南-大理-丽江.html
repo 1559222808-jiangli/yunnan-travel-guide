@@ -1,0 +1,1062 @@
+<!DOCTYPE html>
+<html lang="zh-CN">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>昆明→大理→丽江8天7晚旅游攻略</title>
+    <!-- PWA相关标签 -->
+    <link rel="manifest" href="manifest.json">
+    <meta name="theme-color" content="#4361ee">
+    <meta name="apple-mobile-web-app-capable" content="yes">
+    <meta name="apple-mobile-web-app-status-bar-style" content="black-translucent">
+    <meta name="apple-mobile-web-app-title" content="云南旅游">
+    <link rel="apple-touch-icon" href="https://via.placeholder.com/192">
+    <style>
+        /* 全局样式 */
+        * {
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+            font-family: "Microsoft YaHei", "PingFang SC", "Hiragino Sans GB", sans-serif;
+        }
+        :root {
+            --primary-color: #4361ee;
+            --secondary-color: #3a0ca3;
+            --accent-color: #f72585;
+            --success-color: #4cc9f0;
+            --light-bg: #f8f9fa;
+            --dark-text: #333;
+            --light-text: #666;
+            --border-color: #e0e0e0;
+            --shadow: 0 4px 15px rgba(0,0,0,0.1);
+            --shadow-hover: 0 8px 25px rgba(0,0,0,0.15);
+            --transition: all 0.3s ease;
+        }
+        body {
+            background-color: var(--light-bg);
+            color: var(--dark-text);
+            line-height: 1.6;
+            background-image: linear-gradient(135deg, #f5f7fa 0%, #e3f2fd 100%);
+            min-height: 100vh;
+        }
+        .container {
+            max-width: 1200px;
+            margin: 0 auto;
+            padding: 20px;
+        }
+        /* 头部样式 */
+        header {
+            background: linear-gradient(135deg, var(--primary-color) 0%, var(--secondary-color) 100%);
+            color: white;
+            padding: 40px 0;
+            text-align: center;
+            border-radius: 16px;
+            margin-bottom: 30px;
+            box-shadow: var(--shadow);
+            transition: var(--transition);
+            position: relative;
+            overflow: hidden;
+        }
+        header::before {
+            content: '';
+            position: absolute;
+            top: 0;
+            left: 0;
+            width: 100%;
+            height: 100%;
+            background: radial-gradient(circle at 50% 50%, rgba(255,255,255,0.1) 0%, rgba(255,255,255,0) 70%);
+        }
+        header:hover {
+            transform: translateY(-5px);
+            box-shadow: var(--shadow-hover);
+        }
+        header h1 {
+            font-size: 2.8rem;
+            margin-bottom: 15px;
+            font-weight: 700;
+            text-shadow: 0 2px 4px rgba(0,0,0,0.2);
+            position: relative;
+            z-index: 1;
+        }
+        header p {
+            font-size: 1.3rem;
+            opacity: 0.95;
+            font-weight: 300;
+            position: relative;
+            z-index: 1;
+        }
+        /* 导航栏 */
+        .nav {
+            background-color: white;
+            border-radius: 16px;
+            box-shadow: var(--shadow);
+            margin-bottom: 30px;
+            overflow-x: auto;
+            transition: var(--transition);
+            position: sticky;
+            top: 20px;
+            z-index: 100;
+        }
+        .nav:hover {
+            box-shadow: var(--shadow-hover);
+        }
+        .nav ul {
+            display: flex;
+            list-style: none;
+            padding: 0 20px;
+            justify-content: center;
+            flex-wrap: wrap;
+        }
+        .nav li {
+            padding: 18px 25px;
+            position: relative;
+        }
+        .nav a {
+            text-decoration: none;
+            color: var(--dark-text);
+            font-weight: 600;
+            transition: var(--transition);
+            position: relative;
+            padding: 5px 0;
+            display: inline-block;
+        }
+        .nav a:hover {
+            color: var(--primary-color);
+            transform: translateY(-2px);
+        }
+        .nav a::after {
+            content: '';
+            position: absolute;
+            bottom: 0;
+            left: 0;
+            width: 0;
+            height: 3px;
+            background: linear-gradient(90deg, var(--primary-color), var(--accent-color));
+            transition: width 0.3s ease;
+            border-radius: 2px;
+        }
+        .nav a:hover::after,
+        .nav a.active::after {
+            width: 100%;
+        }
+        /* 板块通用样式 */
+        .section {
+            background-color: white;
+            border-radius: 16px;
+            box-shadow: var(--shadow);
+            padding: 30px;
+            margin-bottom: 30px;
+            transition: var(--transition);
+            position: relative;
+            overflow: hidden;
+            background: linear-gradient(135deg, white 0%, #f9f9f9 100%);
+        }
+        .section::before {
+            content: '';
+            position: absolute;
+            top: 0;
+            left: 0;
+            width: 100%;
+            height: 6px;
+            background: linear-gradient(90deg, var(--primary-color), var(--accent-color));
+            border-radius: 16px 16px 0 0;
+        }
+        .section:hover {
+            transform: translateY(-5px);
+            box-shadow: var(--shadow-hover);
+        }
+        .section h2 {
+            color: var(--primary-color);
+            margin-bottom: 25px;
+            padding-bottom: 12px;
+            border-bottom: 2px solid #f0f0f0;
+            font-size: 1.8rem;
+            font-weight: 700;
+            position: relative;
+        }
+        .section h2::after {
+            content: '';
+            position: absolute;
+            bottom: -2px;
+            left: 0;
+            width: 80px;
+            height: 3px;
+            background: linear-gradient(90deg, var(--primary-color), var(--accent-color));
+        }
+        .section h3 {
+            color: var(--secondary-color);
+            margin: 20px 0 12px;
+            font-size: 1.4rem;
+            font-weight: 600;
+            display: flex;
+            align-items: center;
+            gap: 10px;
+        }
+        .section h3::before {
+            content: '';
+            width: 8px;
+            height: 8px;
+            background: var(--accent-color);
+            border-radius: 50%;
+        }
+        .section h4 {
+            color: var(--accent-color);
+            margin: 12px 0 10px;
+            font-size: 1.2rem;
+            font-weight: 600;
+        }
+        /* 表格样式 */
+        table {
+            width: 100%;
+            border-collapse: collapse;
+            margin: 20px 0;
+            border-radius: 8px;
+            overflow: hidden;
+            box-shadow: 0 2px 8px rgba(0,0,0,0.08);
+        }
+        table th, table td {
+            padding: 14px 18px;
+            text-align: left;
+            border-bottom: 1px solid var(--border-color);
+            transition: var(--transition);
+        }
+        table th {
+            background: linear-gradient(135deg, var(--primary-color), var(--secondary-color));
+            color: white;
+            font-weight: 600;
+            text-shadow: 0 1px 2px rgba(0,0,0,0.2);
+            position: relative;
+        }
+        table th::after {
+            content: '';
+            position: absolute;
+            bottom: 0;
+            left: 0;
+            width: 100%;
+            height: 2px;
+            background: linear-gradient(90deg, var(--accent-color), transparent);
+        }
+        table tr {
+            transition: var(--transition);
+        }
+        table tr:hover {
+            background-color: rgba(67, 97, 238, 0.05);
+            transform: scale(1.01);
+        }
+        table tr:last-child td {
+            border-bottom: none;
+        }
+        
+        /* 对比表格样式 */
+        .comparison-table {
+            width: 100%;
+            border-collapse: collapse;
+            margin: 20px 0;
+            border-radius: 8px;
+            overflow: hidden;
+            box-shadow: 0 2px 8px rgba(0,0,0,0.08);
+        }
+        .comparison-table th,
+        .comparison-table td {
+            padding: 12px 15px;
+            text-align: left;
+            border-bottom: 1px solid var(--border-color);
+            transition: var(--transition);
+        }
+        .comparison-table th {
+            background: linear-gradient(135deg, var(--primary-color), var(--secondary-color));
+            color: white;
+            font-weight: 600;
+            white-space: nowrap;
+            text-shadow: 0 1px 2px rgba(0,0,0,0.2);
+        }
+        .comparison-table tr {
+            transition: var(--transition);
+        }
+        .comparison-table tr:hover {
+            background-color: rgba(67, 97, 238, 0.05);
+            transform: scale(1.01);
+        }
+        .comparison-table tr:last-child td {
+            border-bottom: none;
+            font-weight: 600;
+        }
+        
+        @media (max-width: 768px) {
+            .comparison-table {
+                display: block;
+                overflow-x: auto;
+                white-space: nowrap;
+            }
+        }
+        /* 行程动线样式 */
+        .route {
+            color: var(--accent-color);
+            font-weight: 600;
+            margin: 5px 0;
+            font-size: 1.1rem;
+            animation: pulse 2s infinite;
+        }
+        @keyframes pulse {
+            0% {
+                opacity: 1;
+            }
+            50% {
+                opacity: 0.7;
+            }
+            100% {
+                opacity: 1;
+            }
+        }
+        /* 高亮标签 */
+        .tag {
+            display: inline-block;
+            background: linear-gradient(135deg, var(--accent-color), #f72585cc);
+            color: white;
+            padding: 4px 12px;
+            border-radius: 20px;
+            font-size: 0.9rem;
+            margin: 0 8px 8px 0;
+            font-weight: 600;
+            box-shadow: 0 2px 8px rgba(247, 37, 133, 0.3);
+            transition: var(--transition);
+        }
+        .tag:hover {
+            transform: scale(1.05);
+            box-shadow: 0 4px 12px rgba(247, 37, 133, 0.4);
+        }
+        /* 图片样式 */
+        .image-container {
+            margin: 20px 0;
+            border-radius: 12px;
+            overflow: hidden;
+            box-shadow: 0 6px 20px rgba(0,0,0,0.15);
+            transition: var(--transition);
+        }
+        .image-container:hover {
+            transform: translateY(-5px);
+            box-shadow: 0 10px 25px rgba(0,0,0,0.2);
+        }
+        .landscape-img {
+            width: 100%;
+            height: auto;
+            display: block;
+            transition: transform 0.5s ease;
+        }
+        .image-container:hover .landscape-img {
+            transform: scale(1.05);
+        }
+        
+        /* 实用工具样式 */
+        .tool-item {
+            margin-bottom: 20px;
+            padding: 20px;
+            background: linear-gradient(135deg, white 0%, #f8f9fa 100%);
+            border-radius: 12px;
+            box-shadow: 0 2px 8px rgba(0,0,0,0.08);
+            transition: var(--transition);
+        }
+        .tool-item:hover {
+            transform: translateY(-3px);
+            box-shadow: 0 4px 12px rgba(0,0,0,0.12);
+        }
+        .countdown-container {
+            display: flex;
+            flex-direction: column;
+            gap: 15px;
+            margin-top: 15px;
+        }
+        #start-date {
+            padding: 12px 16px;
+            border: 2px solid var(--border-color);
+            border-radius: 8px;
+            font-size: 1rem;
+            transition: var(--transition);
+            background-color: white;
+        }
+        #start-date:focus {
+            outline: none;
+            border-color: var(--primary-color);
+            box-shadow: 0 0 0 3px rgba(67, 97, 238, 0.1);
+        }
+        #countdown-result {
+            margin-top: 15px;
+            padding: 15px;
+            background: linear-gradient(135deg, white 0%, #f0f8ff 100%);
+            border-radius: 8px;
+            box-shadow: 0 2px 8px rgba(0,0,0,0.08);
+            border-left: 4px solid var(--primary-color);
+        }
+        
+        /* 导航栏固定 */
+        .nav-fixed {
+            position: fixed;
+            top: 0;
+            left: 0;
+            right: 0;
+            z-index: 1000;
+            box-shadow: var(--shadow-hover);
+            animation: slideDown 0.3s ease;
+        }
+        @keyframes slideDown {
+            from {
+                transform: translateY(-100%);
+            }
+            to {
+                transform: translateY(0);
+            }
+        }
+        
+        /* 动画效果 */
+        .fade-in {
+            opacity: 0;
+            transform: translateY(30px);
+            transition: opacity 0.8s ease, transform 0.8s ease;
+        }
+        .fade-in.visible {
+            opacity: 1;
+            transform: translateY(0);
+        }
+        
+        /* 返回顶部按钮 */
+        .back-to-top {
+            position: fixed;
+            bottom: 30px;
+            right: 30px;
+            width: 55px;
+            height: 55px;
+            background: linear-gradient(135deg, var(--primary-color), var(--accent-color));
+            color: white;
+            border-radius: 50%;
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            cursor: pointer;
+            box-shadow: 0 4px 15px rgba(0,0,0,0.2);
+            opacity: 0;
+            transition: all 0.4s ease;
+            transform: translateY(20px) scale(0.8);
+            z-index: 999;
+            font-size: 1.5rem;
+        }
+        .back-to-top.visible {
+            opacity: 1;
+            transform: translateY(0) scale(1);
+        }
+        .back-to-top:hover {
+            transform: translateY(-5px) scale(1.1);
+            box-shadow: 0 6px 20px rgba(0,0,0,0.25);
+        }
+        
+        /* 导航项高亮 */
+        .nav a.active {
+            color: var(--primary-color);
+        }
+        
+        /* 响应式适配 */
+        @media (max-width: 768px) {
+            header h1 {
+                font-size: 1.8rem;
+            }
+            .nav li {
+                padding: 12px 10px;
+            }
+            .section {
+                padding: 15px;
+            }
+            table th, table td {
+                padding: 8px 10px;
+                font-size: 0.9rem;
+            }
+            .back-to-top {
+                width: 40px;
+                height: 40px;
+                bottom: 20px;
+                right: 20px;
+            }
+            #map {
+                height: 300px !important;
+            }
+        }
+        @media (max-width: 480px) {
+            .nav ul {
+                flex-wrap: wrap;
+            }
+            .section h2 {
+                font-size: 1.5rem;
+            }
+            .section h3 {
+                font-size: 1.2rem;
+            }
+            .section h4 {
+                font-size: 1rem;
+            }
+            table {
+                display: block;
+                overflow-x: auto;
+                white-space: nowrap;
+            }
+            #map {
+                height: 250px !important;
+            }
+        }
+        @media (max-width: 375px) {
+            header h1 {
+                font-size: 1.5rem;
+            }
+            header p {
+                font-size: 1rem;
+            }
+            .nav li {
+                padding: 10px 8px;
+                font-size: 0.9rem;
+            }
+        }
+    </style>
+</head>
+<body>
+    <div class="container">
+        <!-- 头部标题 -->
+        <header>
+            <h1>✨ 昆明→大理→丽江 8天7晚旅游攻略</h1>
+            <p>洱海日出日落 | 日照金山 | 路线不绕路 | 节奏松弛不赶趟</p>
+        </header>
+
+        <!-- 导航栏 -->
+        <nav class="nav">
+            <ul>
+                <li><a href="#overview">行程总览</a></li>
+                <li><a href="#daily">每日行程</a></li>
+                <li><a href="#highlight">核心景观</a></li>
+                <li><a href="#cost">费用清单</a></li>
+                <li><a href="#reserve">预约事项</a></li>
+                <li><a href="#tips">实用贴士</a></li>
+            </ul>
+        </nav>
+        
+        <!-- 实用工具板块 -->
+        <section class="section" id="tools">
+            <h2>🛠️ 实用工具</h2>
+            
+            <!-- 倒计时 -->
+            <div class="tool-item">
+                <h3>⏰ 出发倒计时</h3>
+                <div class="countdown-container">
+                    <input type="date" id="start-date" value="2026-03-24">
+                    <div id="countdown-result"></div>
+                </div>
+            </div>
+        </section>
+
+        <!-- 行程总览板块 -->
+        <section class="section" id="overview">
+            <h2>🗺️ 行程总览</h2>
+            <table>
+                <tr>
+                    <th>日期</th>
+                    <th>城市</th>
+                    <th>核心主题</th>
+                    <th>必看亮点</th>
+                </tr>
+                <tr>
+                    <td>3.24</td>
+                    <td>昆明/大理</td>
+                    <td>抵达衔接</td>
+                    <td>昆明老街 / 当晚动车去大理</td>
+                </tr>
+                <tr>
+                    <td>3.25</td>
+                    <td>大理</td>
+                    <td>古城初体验+洱海西线日落</td>
+                    <td>磻溪S湾、兴盛大桥日落</td>
+                </tr>
+                <tr>
+                    <td>3.26</td>
+                    <td>大理</td>
+                    <td>洱海日出+环海东路深度游</td>
+                    <td>龙龛码头日出、双廊古镇、挖色码头日落</td>
+                </tr>
+                <tr>
+                    <td>3.27</td>
+                    <td>大理</td>
+                    <td>三塔+苍山远观+古城夜景</td>
+                    <td>崇圣寺三塔、苍山远景、古城夜逛</td>
+                </tr>
+                <tr>
+                    <td>3.28</td>
+                    <td>大理→丽江</td>
+                    <td>有风的地方+动车转场</td>
+                    <td>凤阳邑村、大理大学、丽江古城夜景</td>
+                </tr>
+                <tr>
+                    <td>3.29</td>
+                    <td>丽江</td>
+                    <td>日照金山备选+古城+束河</td>
+                    <td>黑龙潭日照金山、束河古镇</td>
+                </tr>
+                <tr>
+                    <td>3.30</td>
+                    <td>丽江</td>
+                    <td>日照金山+玉龙雪山一日游</td>
+                    <td>甘海子日照金山、大索道、蓝月谷</td>
+                </tr>
+                <tr>
+                    <td>3.31</td>
+                    <td>丽江</td>
+                    <td>白沙古镇+拉市海</td>
+                    <td>白沙日照金山、拉市海湿地</td>
+                </tr>
+                <tr>
+                    <td>4.1</td>
+                    <td>丽江</td>
+                    <td>古城收尾+返程</td>
+                    <td>伴手礼采购、黑龙潭补拍</td>
+                </tr>
+            </table>
+        </section>
+
+        <!-- 每日详细行程板块 -->
+        <section class="section" id="daily">
+            <h2>📅 每日详细行程</h2>
+            
+            <h3>🌿 3月24日 | 昆明抵达日（精简不绕路）</h3>
+            <h4>方案A：昆明留宿（轻松版）</h4>
+            <p>16:10 长水机场 <span class="route">➡️</span> 地铁 <span class="route">➡️</span> 昆明站附近酒店</p>
+            <p>18:00 南屏街 <span class="route">➡️</span> 金马碧鸡坊 <span class="route">➡️</span> 昆明老街（吃过桥米线/汽锅鸡）</p>
+            <p>22:00 休息，次日早班动车去大理</p>
+            
+            <h4>方案B：当晚去大理（省时版）</h4>
+            <p>16:10 长水机场 <span class="route">➡️</span> 地铁 <span class="route">➡️</span> 昆明站 <span class="route">➡️</span> 晚班动车 <span class="route">➡️</span> 大理站 <span class="route">➡️</span> 大理古城民宿</p>
+            <p>21:30 入住休息（直接跳过昆明绕路，留更多时间给洱海）</p>
+
+            <h3>🌊 3月25日 | 大理：古城初体验+洱海西线日落</h3>
+            <p>08:00 大理站 <span class="route">➡️</span> 大理古城（办理入住）</p>
+            <p>09:00 大理古城（白天逛五华楼/人民路，留晚上继续逛）</p>
+            <p>14:00 古城 <span class="route">➡️</span> 租电动车/吉普车 <span class="route">➡️</span> 磻溪S湾 <span class="route">➡️</span> 生态廊道 <span class="route">➡️</span> 才村码头</p>
+            <p>18:30 才村码头 <span class="route">➡️</span> 兴盛大桥 <span class="tag">洱海日落</span>（蓝调时刻绝美）</p>
+            <p>20:00 古城夜景（洋人街/酒吧街，晚上逛更有氛围）</p>
+
+            <h3>🌅 3月26日 | 大理：洱海日出+环海东路深度游（核心日）</h3>
+            <p>06:30 古城 <span class="route">➡️</span> 打车 <span class="route">➡️</span> 龙龛码头 <span class="tag">洱海日出</span>（3月约7:10，提前30分钟占位）</p>
+            <p>08:30 龙龛码头 <span class="route">➡️</span> 喜洲古镇（四方街/转角楼，吃现烤喜洲粑粑）</p>
+            <p>12:00 喜洲 <span class="route">➡️</span> 双廊古镇（午餐：洱海砂锅鱼）</p>
+            <p>14:00 双廊 <span class="route">➡️</span> 玉几岛 <span class="route">➡️</span> 南诏风情岛（可选游船，感受碧波）</p>
+            <p>17:30 双廊 <span class="route">➡️</span> 挖色码头 <span class="tag">洱海日落</span>（苍山+金色湖面同框）</p>
+            <p>19:30 双廊 <span class="route">➡️</span> 包车 <span class="route">➡️</span> 大理古城</p>
+
+            <h3>🏯 3月27日 | 大理：三塔+苍山远观+古城夜逛</h3>
+            <p>09:00 古城 <span class="route">➡️</span> 崇圣寺三塔（拍三塔倒影，门票75元）</p>
+            <p>12:00 三塔 <span class="route">➡️</span> 苍山脚下 <span class="tag">远观苍山</span>（不必上山，节省体力）</p>
+            <p>14:00 返回古城 <span class="route">➡️</span> 床单厂艺术区 <span class="route">➡️</span> 洱海门</p>
+            <p>19:00 古城夜景（人民路/五华楼俯瞰，补逛第一天没走完的角落）</p>
+
+            <h3>🍃 3月28日 | 大理→丽江：有风的地方+转场</h3>
+            <p>09:00 古城 <span class="route">➡️</span> 凤阳邑村（《去有风的地方》取景地，白族民居体验）</p>
+            <p>13:00 凤阳邑 <span class="route">➡️</span> 大理大学（樱花大道+俯瞰洱海全景）</p>
+            <p>16:00 古城 <span class="route">➡️</span> 大理站 <span class="route">➡️</span> 动车 <span class="route">➡️</span> 丽江站 <span class="route">➡️</span> 丽江古城民宿</p>
+            <p>20:00 丽江古城夜景（四方街/酒吧街，吃腊排骨火锅）</p>
+
+            <h3>🏔️ 3月29日 | 丽江：日照金山备选+古城+束河</h3>
+            <p>06:30 古城 <span class="route">➡️</span> 黑龙潭公园 <span class="tag">日照金山备选</span>（得月楼+雪山倒影机位）</p>
+            <p>09:00 黑龙潭 <span class="route">➡️</span> 丽江古城 <span class="route">➡️</span> 木府 <span class="route">➡️</span> 狮子山（俯瞰古城全景）</p>
+            <p>14:00 古城 <span class="route">➡️</span> 束河古镇（比大研安静，茶马古道原貌）</p>
+            <p>19:00 束河 <span class="route">➡️</span> 丽江古城（吃野生菌火锅）</p>
+
+            <h3>🏔️ 3月30日 | 丽江：日照金山+玉龙雪山一日游（核心日）</h3>
+            <p>05:30 古城 <span class="route">➡️</span> 包车 <span class="route">➡️</span> 甘海子 <span class="tag">日照金山最佳</span>（3月约6:50，无遮挡）</p>
+            <p>08:00 甘海子 <span class="route">➡️</span> 玉龙雪山景区 <span class="route">➡️</span> 大索道 <span class="route">➡️</span> 冰川公园（4680米，注意高反）</p>
+            <p>12:00 冰川公园 <span class="route">➡️</span> 蓝月谷 <span class="route">➡️</span> 云杉坪（“小九寨”蓝月谷必拍）</p>
+            <p>16:00 景区 <span class="route">➡️</span> 丽江古城</p>
+            <p>19:00 古城夜景（可选《丽水金沙》演出，体验纳西文化）</p>
+
+            <h3>🏡 3月31日 | 丽江：白沙古镇+拉市海</h3>
+            <p>07:00 古城 <span class="route">➡️</span> 白沙古镇 <span class="tag">日照金山备选</span>（民宿露台看雪山，商业化最弱）</p>
+            <p>09:00 白沙 <span class="route">➡️</span> 四方街 <span class="route">➡️</span> 白沙壁画（明代艺术瑰宝）</p>
+            <p>13:00 白沙 <span class="route">➡️</span> 玉水寨（纳西文化发源地，神泉瀑布）</p>
+            <p>16:00 玉水寨 <span class="route">➡️</span> 拉市海（骑马+划船，看湿地日落）</p>
+            <p>19:30 拉市海 <span class="route">➡️</span> 丽江古城</p>
+
+            <h3>✈️ 4月1日 | 丽江：古城收尾+返程</h3>
+            <p>09:00 古城 <span class="route">➡️</span> 七一街 <span class="route">➡️</span> 四方街（买伴手礼：鲜花饼/牦牛肉干）</p>
+            <p>14:00 黑龙潭公园（补拍雪山倒影，弥补天气遗憾）</p>
+            <p>18:00 整理行李 <span class="route">➡️</span> 退房 <span class="route">➡️</span> 丽江站/机场</p>
+        </section>
+
+        <!-- 核心景观打卡指南 -->
+        <section class="section" id="highlight">
+            <h2>✨ 核心景观打卡指南</h2>
+            
+            <h3>🌅 洱海日出</h3>
+            <ul>
+                <li>最佳机位：龙龛码头（红杉林+水中栈道）</li>
+                <li>时间：3月约7:10，提前30分钟到占位</li>
+                <li>穿搭：浅色衣服+围巾，出片率拉满</li>
+            </ul>
+
+            <h3>🌇 洱海日落</h3>
+            <ul>
+                <li>最佳机位：兴盛大桥（蓝调时刻）、挖色码头（苍山+湖面）</li>
+                <li>时间：3月约19:00，提前1小时到</li>
+            </ul>
+
+            <h3>🌄 日照金山</h3>
+            <ul>
+                <li>最佳机位：甘海子（震撼无遮挡）> 黑龙潭（倒影经典）> 白沙古镇（人文+自然）</li>
+                <li>时间：3月约6:50，提前40分钟到</li>
+                <li>关键：必须晴天！提前2天看天气预报，预留2天观赏机会</li>
+            </ul>
+        </section>
+
+        <!-- 费用清单板块（新增） -->
+        <section class="section" id="cost">
+            <h2>💰 费用清单（单人）</h2>
+            
+            <table class="comparison-table">
+                <tr>
+                    <th>项目</th>
+                    <th>明细</th>
+                    <th>经济版费用（元）</th>
+                    <th>经济版备注</th>
+                    <th>舒适版费用（元）</th>
+                    <th>舒适版备注</th>
+                </tr>
+                <tr>
+                    <td rowspan="3">交通</td>
+                    <td>昆明→大理动车</td>
+                    <td>109</td>
+                    <td>二等座</td>
+                    <td>145</td>
+                    <td>一等座/优选时段</td>
+                </tr>
+                <tr>
+                    <td>大理→丽江动车</td>
+                    <td>64</td>
+                    <td>二等座</td>
+                    <td>80</td>
+                    <td>一等座/优选时段</td>
+                </tr>
+                <tr>
+                    <td>当地交通</td>
+                    <td>400</td>
+                    <td>公交/电动车/拼车</td>
+                    <td>800</td>
+                    <td>打车/包车/高端电动车</td>
+                </tr>
+                <tr>
+                    <td rowspan="2">住宿</td>
+                    <td>大理4晚</td>
+                    <td>800</td>
+                    <td>古城平价民宿（200元/晚）</td>
+                    <td>1600</td>
+                    <td>古城精品民宿（400元/晚）</td>
+                </tr>
+                <tr>
+                    <td>丽江4晚</td>
+                    <td>800</td>
+                    <td>古城平价民宿（200元/晚）</td>
+                    <td>1600</td>
+                    <td>古城精品民宿（400元/晚）</td>
+                </tr>
+                <tr>
+                    <td rowspan="4">门票</td>
+                    <td>崇圣寺三塔</td>
+                    <td>75</td>
+                    <td>提前预约</td>
+                    <td>75</td>
+                    <td>提前预约</td>
+                </tr>
+                <tr>
+                    <td>玉龙雪山</td>
+                    <td>260</td>
+                    <td>大索道+门票+观光车</td>
+                    <td>260</td>
+                    <td>大索道+门票+观光车</td>
+                </tr>
+                <tr>
+                    <td>丽江古城维护费</td>
+                    <td>50</td>
+                    <td>黑龙潭必用</td>
+                    <td>50</td>
+                    <td>黑龙潭必用</td>
+                </tr>
+                <tr>
+                    <td>其他小景点</td>
+                    <td>70</td>
+                    <td>木府/白沙壁画等（可选）</td>
+                    <td>270</td>
+                    <td>木府/白沙壁画等+《丽水金沙》演出</td>
+                </tr>
+                <tr>
+                    <td>餐饮</td>
+                    <td>8天</td>
+                    <td>1200</td>
+                    <td>简餐/本地小吃（150元/天）</td>
+                    <td>2000</td>
+                    <td>特色菜/网红餐厅（250元/天）</td>
+                </tr>
+                <tr>
+                    <td>其他</td>
+                    <td>杂项</td>
+                    <td>200</td>
+                    <td>氧气瓶/伴手礼/应急</td>
+                    <td>400</td>
+                    <td>氧气瓶/伴手礼/应急/体验项</td>
+                </tr>
+                <tr>
+                    <td colspan="2">总计</td>
+                    <td><strong>4028</strong></td>
+                    <td>不含出发地→昆明往返大交通</td>
+                    <td><strong>7280</strong></td>
+                    <td>不含出发地→昆明往返大交通</td>
+                </tr>
+            </table>
+        </section>
+
+        <!-- 预约事项板块（新增） -->
+        <section class="section" id="reserve">
+            <h2>🎫 预约事项（重点！）</h2>
+            <table>
+                <tr>
+                    <th>预约项目</th>
+                    <th>预约时间</th>
+                    <th>官方渠道/平台</th>
+                    <th>备注/抢票技巧</th>
+                </tr>
+                <tr>
+                    <td>昆明→大理动车票</td>
+                    <td>提前15天</td>
+                    <td>铁路12306 APP/官网</td>
+                    <td>选择靠窗位，看沿途风景</td>
+                </tr>
+                <tr>
+                    <td>大理→丽江动车票</td>
+                    <td>提前7-10天</td>
+                    <td>铁路12306 APP/官网</td>
+                    <td>优选下午时段，不耽误白天游玩</td>
+                </tr>
+                <tr>
+                    <td>崇圣寺三塔门票</td>
+                    <td>提前1天</td>
+                    <td>「崇圣寺三塔」微信公众号</td>
+                    <td>避免现场排队，凭身份证入园</td>
+                </tr>
+                <tr>
+                    <td>玉龙雪山大索道票</td>
+                    <td>提前7天 20:00准时抢</td>
+                    <td>「丽江旅游集团」微信小程序</td>
+                    <td>1. 提前录入身份信息<br>2. 选早时段（08:00前）<br>3. 绑定微信支付，准点抢购</td>
+                </tr>
+                <tr>
+                    <td>黑龙潭公园预约</td>
+                    <td>提前1天</td>
+                    <td>「游云南」APP/小程序</td>
+                    <td>免费预约，需出示古城维护费凭证</td>
+                </tr>
+                <tr>
+                    <td>木府门票</td>
+                    <td>提前1天</td>
+                    <td>「丽江木府」微信公众号</td>
+                    <td>门票含免费讲解，可凑团听</td>
+                </tr>
+                <tr>
+                    <td>苍山洗马潭索道（可选）</td>
+                    <td>提前1天 20:00放票</td>
+                    <td>「大理苍山景区」微信公众号</td>
+                    <td>受天气影响大，提前查天气预报</td>
+                </tr>
+                <tr>
+                    <td>丽江包车/拼车</td>
+                    <td>提前2天</td>
+                    <td>民宿前台推荐/正规旅行社</td>
+                    <td>明确价格，避免中途加价</td>
+                </tr>
+            </table>
+        </section>
+
+        <!-- 实用贴士板块 -->
+        <section class="section" id="tips">
+            <h2>💡 实用贴士 & 避坑提醒</h2>
+            
+            <h3>👔 穿搭建议</h3>
+            <ul>
+                <li>洋葱式穿搭：内搭+薄外套+防风冲锋衣（早晚温差10-15℃）</li>
+                <li>必备：墨镜、帽子、SPF50+防晒霜、润唇膏（高原干燥）</li>
+                <li>玉龙雪山：加一件厚外套/羽绒服（可租，50元/件）</li>
+            </ul>
+
+            <h3>🩺 高反预防</h3>
+            <ul>
+                <li>逐步适应海拔：昆明(1900m)→大理(2000m)→丽江(2400m)→玉龙雪山(4680m)</li>
+                <li>玉龙雪山：备1-2瓶氧气瓶（提前买30元/瓶，景区80元/瓶），不跑跳、多喝水</li>
+                <li>可提前3天吃红景天（辅助预防，非特效药）</li>
+            </ul>
+
+            <h3>🚗 交通避坑</h3>
+            <ul>
+                <li>大理租电动车：选正规店铺，戴头盔，确认电池续航（环海需满电）</li>
+                <li>丽江包车：拒绝低价黑车，民宿推荐的师傅更靠谱</li>
+                <li>景区电瓶车：玉龙雪山蓝月谷电瓶车必坐（步行需1小时）</li>
+            </ul>
+
+            <h3>🍜 美食避坑</h3>
+            <ul>
+                <li>避开古城门口拉客餐厅，走进去50米以上，选本地人常吃的店</li>
+                <li>大理必吃：喜洲粑粑（现烤咸口）、白族酸辣鱼、乳扇（街边现烤）</li>
+                <li>丽江必吃：腊排骨火锅、纳西烤肉、鸡豆凉粉（忠义市场附近）</li>
+            </ul>
+
+            <h3>⚠️ 其他提醒</h3>
+            <ul>
+                <li>日照金山/洱海日出日落：提前2天查天气预报，预留2天观赏机会</li>
+                <li>伴手礼：鲜花饼（嘉华/潘祥记）、牦牛肉干（正规超市买）</li>
+                <li>现金：备少量（部分小店/景区厕所需现金）</li>
+            </ul>
+        </section>
+    </div>
+    
+    <!-- 动态效果脚本 -->
+    <script type="text/javascript">
+        // 平滑滚动
+        document.querySelectorAll('a[href^="#"]').forEach(anchor => {
+            anchor.addEventListener('click', function (e) {
+                e.preventDefault();
+                document.querySelector(this.getAttribute('href')).scrollIntoView({
+                    behavior: 'smooth'
+                });
+            });
+        });
+        
+        // 导航栏固定
+        const nav = document.querySelector('.nav');
+        const navTop = nav.offsetTop;
+        
+        function stickyNav() {
+            if (window.scrollY >= navTop) {
+                nav.classList.add('nav-fixed');
+                document.body.style.paddingTop = nav.offsetHeight + 'px';
+            } else {
+                nav.classList.remove('nav-fixed');
+                document.body.style.paddingTop = 0;
+            }
+        }
+        
+        // 内容动画
+        function checkFade() {
+            const fadeElements = document.querySelectorAll('.fade-in');
+            fadeElements.forEach(element => {
+                const elementTop = element.getBoundingClientRect().top;
+                const elementVisible = 150;
+                if (elementTop < window.innerHeight - elementVisible) {
+                    element.classList.add('visible');
+                }
+            });
+        }
+        
+        // 返回顶部按钮
+        const backToTopButton = document.createElement('div');
+        backToTopButton.className = 'back-to-top';
+        backToTopButton.innerHTML = '↑';
+        document.body.appendChild(backToTopButton);
+        
+        function toggleBackToTop() {
+            if (window.scrollY > 300) {
+                backToTopButton.classList.add('visible');
+            } else {
+                backToTopButton.classList.remove('visible');
+            }
+        }
+        
+        backToTopButton.addEventListener('click', () => {
+            window.scrollTo({
+                top: 0,
+                behavior: 'smooth'
+            });
+        });
+        
+        // 导航项高亮
+        function highlightNav() {
+            const sections = document.querySelectorAll('.section');
+            const navLinks = document.querySelectorAll('.nav a');
+            
+            let current = '';
+            sections.forEach(section => {
+                const sectionTop = section.offsetTop;
+                const sectionHeight = section.clientHeight;
+                if (window.scrollY >= sectionTop - 200) {
+                    current = section.getAttribute('id');
+                }
+            });
+            
+            navLinks.forEach(link => {
+                link.classList.remove('active');
+                if (link.getAttribute('href').substring(1) === current) {
+                    link.classList.add('active');
+                }
+            });
+        }
+        
+        // 事件监听
+        window.addEventListener('scroll', () => {
+            stickyNav();
+            checkFade();
+            toggleBackToTop();
+            highlightNav();
+        });
+        
+        // 初始化
+        window.addEventListener('load', () => {
+            checkFade();
+        });
+        
+        // 为所有section添加fade-in类
+        document.querySelectorAll('.section').forEach(section => {
+            section.classList.add('fade-in');
+        });
+        
+
+        
+        // 倒计时功能
+        function updateCountdown() {
+            const startDate = new Date(document.getElementById('start-date').value);
+            const now = new Date();
+            const diffTime = startDate - now;
+            
+            if (diffTime <= 0) {
+                document.getElementById('countdown-result').innerHTML = '<p>出发日期已过！</p>';
+                return;
+            }
+            
+            const diffDays = Math.floor(diffTime / (1000 * 60 * 60 * 24));
+            const diffHours = Math.floor((diffTime % (1000 * 60 * 60 * 24)) / (1000 * 60 * 60));
+            const diffMinutes = Math.floor((diffTime % (1000 * 60 * 60)) / (1000 * 60));
+            
+            document.getElementById('countdown-result').innerHTML = `
+                <p>距离出发还有：</p>
+                <p><strong>${diffDays}</strong> 天 <strong>${diffHours}</strong> 小时 <strong>${diffMinutes}</strong> 分钟</p>
+            `;
+        }
+        
+        // 初始化倒计时
+        updateCountdown();
+        
+        // 监听日期变化
+        document.getElementById('start-date').addEventListener('change', updateCountdown);
+        
+        // 每秒更新倒计时
+        setInterval(updateCountdown, 1000);
+        
+        // 注册Service Worker
+        if ('serviceWorker' in navigator) {
+            window.addEventListener('load', function() {
+                navigator.serviceWorker.register('service-worker.js')
+                    .then(function(registration) {
+                        console.log('Service Worker 注册成功:', registration.scope);
+                    })
+                    .catch(function(error) {
+                        console.log('Service Worker 注册失败:', error);
+                    });
+            });
+        }
+    </script>
+</body>
+</html>
